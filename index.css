@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni Moda', serif;
+}
+
+body {
+    background-image: url("https://img.freepik.com/free-photo/top-view-beautiful-birthday-arrangement-with-copy-space_23-2148276580.jpg?t=st=1721913759~exp=1721917359~hmac=aeead3289d6b4d03fdbe79dbc78b7f0c0aedb3202d145925b51e27c8c683557a&w=900");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    max-width: 280px;
+    height: 360px;
+    margin: 20px auto;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.outside, .inside {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.outside {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.inside {
+    background-color:rgb(37, 37, 127);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: rotateY(180deg);
+    color: aliceblue;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 250px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.frame {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame img {
+    width: 100%;
+    max-width: 125px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.frame p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .card, .frame {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+}
